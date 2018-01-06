@@ -1,5 +1,60 @@
-title: Enoki
+title: Vibedrive
 
 ----
 
-text: Enokitake, also Enokidake or Enoki, are cultivars of Flammulina velutipes, also known by the name golden needle mushroom or lily mushroom.
+subtitle: Vibedrive is a modern tool for digital DJs.
+
+----
+
+text: 
+  Spend more of your time making music — 
+  instead of juggling multiple hard drives and tediously copying files everywhere.
+
+  The fact is, you're a creative person, not a computer. It's time to move beyond file management software.
+
+----
+
+text2:
+  Vibedrive is a music management tool focused on getting out of your way. It empowers DJs to find innovative sounds, craft artful mixes, share playlist information, and stay updated on new music—all inside of a familiar, web-based music searching environment.
+
+----
+
+text3:
+  Enhance your workflow with a tool you can trust.
+
+----
+
+text4:
+  Professionals need reliable, trustworthy tools. That's why Vibedrive is also a desktop application that can be used offline.
+
+  Stay in control of your workflow—update to new versions of Vibedrive (or don't) only when it's convenient for you.
+
+----
+
+cta: Get Vibedrive
+
+----
+
+image: vibedrive-logo-wordmark.svg
+
+----
+
+subscribecta: Subscribe
+
+----
+
+subscribetext: 
+
+Join our newsletter for articles on building digital music tools, behind-the-scenes on Vibedrive development, and sneak peeks at new features.
+
+----
+
+networks:
+  - 
+    name: twitter
+    link: https://twitter.com/VibedriveApp
+    icon: twitter.svg
+  - 
+    name: medium
+    link: https://medium.com/vibedrive/
+    icon: medium.svg
