@@ -1,4 +1,5 @@
 var html = require('choo/html')
+var ov = require('object-values')
 var wrapper = require('../components/wrapper')
 var format = require('../components/format')
 var emailForm = require('../components/email-form')
@@ -29,7 +30,7 @@ function pricing (state, emit) {
 }
 
 function social (state, emit) {
-  var networks = Object.values(state.content.networks || {})
+  var networks = ov(state.content.networks || {})
 
   return html`
     <div class="tac mt5">
