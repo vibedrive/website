@@ -2,3 +2,15 @@ title: Pricing
 
 ----
 
+subtitle: Thanks for your interest in Vibedrive
+
+----
+
+text: 
+
+Currently, Vibedrive is exclusively available to professional DJs & Producers.
+If you’d like to be invited, please enter your email below:
+
+----
+
+cta: Get Your Invitation

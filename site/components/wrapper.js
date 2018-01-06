@@ -2,11 +2,12 @@ var html = require('choo/html')
 var ov = require('object-values')
 var path = require('path')
 var format = require('./format')
+var social = require('./social')
 var emailForm = require('./email-form')
 
 module.exports = wrapper
 
-function wrapper (view) {
+function wrapper (view, opts = {}) {
   return function (state, emit) {
     return html`
       <main>
@@ -20,7 +21,7 @@ function wrapper (view) {
           </div>
         </div>
         ${view(state, emit)}
-        ${footer(state, emit)}
+        ${opts.footer === false ? '' : footer(state, emit)}
       </main>
     `
   }
@@ -37,7 +38,7 @@ function navigation (state, emit) {
   var links = ov(state.links) || [ ]
 
   return html`
-    <div class="x xjc ffmono">
+    <div class="x xjc ">
       ${links.map(link)}
     </div>
   `
@@ -46,7 +47,7 @@ function navigation (state, emit) {
     var activeClass = isActive(link.dirname) ? 'fwb' : ''
     return html`
       <div class="p0-5 ${activeClass}">
-        <a href="${link.url}">${link.title || link.dirname}</a>
+        <a class="no-underline" href="${link.url}">${link.title || link.dirname}</a>
       </div>
     `
   }
@@ -71,24 +72,4 @@ function footer (state, emit) {
       </div>
     </div>
   `
-}
-
-function social (state, emit) {
-  var networks = Object.values(state.content.networks || {})
-
-  return html`
-    <div class="gray">
-      <div>
-        ${networks.map(icon)}
-      </div>
-      © 2017 Vibedrive Labs
-    </div>`
-
-  function icon (state) {
-    return html`
-      <a href=${state.link} target="_new">
-        <img src=${state.icon} class="w2 h2 mh1" title=${state.name} />
-      </a>
-    `
-  }
 }

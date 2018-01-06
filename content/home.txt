@@ -53,8 +53,8 @@ networks:
   - 
     name: twitter
     link: https://twitter.com/VibedriveApp
-    icon: twitter.svg
+    icon: twitter
   - 
     name: medium
     link: https://medium.com/vibedrive/
-    icon: medium.svg
+    icon: medium
