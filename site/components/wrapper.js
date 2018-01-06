@@ -29,7 +29,7 @@ function wrapper (view, opts = {}) {
 
 function logo (state, emit) {
   return html` 
-    <a href="/"><img class="" src=${state.content.image} style="width: 10rem"></img></a>
+    <a href="/"><img class="" src="/${state.content.image}" style="width: 10rem"></img></a>
   `
 }
 
