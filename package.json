@@ -1,7 +1,7 @@
 {
-  "name": "enoki-starterkit",
+  "name": "vibedrive-enoki",
   "version": "1.0.2",
-  "description": "A little javascript static site generator",
+  "description": "vibedrive website, based on enoki-starterkit",
   "main": "site/index.js",
   "scripts": {
     "api": "",
