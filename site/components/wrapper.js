@@ -40,13 +40,16 @@ function navigation (state, emit) {
   return html`
     <div class="x xjc ">
       ${links.map(link)}
+      <div class="pt0 ml3">
+       <a class="mv1 pv2 ph3 bg-white black dib no-underline" href="https://my.vibedrive.co">Login</a>
+      </div>
     </div>
   `
 
   function link (link) {
     var activeClass = isActive(link.dirname) ? 'fwb' : ''
     return html`
-      <div class="p0-5 ${activeClass}">
+      <div class="pt2 mt1 mh3 ${activeClass}">
         <a class="no-underline" href="${link.url}">${link.title || link.dirname}</a>
       </div>
     `
