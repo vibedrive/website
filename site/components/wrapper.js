@@ -10,16 +10,16 @@ module.exports = wrapper
 function wrapper (view, opts = {}) {
   return function (state, emit) {
     return html`
-      <main>
-        <div class="bg--black c12 p1 x xjc">
-          <div class="w10 x xjb">
+      <main class="">
+        <nav id="navbar" class="pa3 pa4-ns bg--black flex justify-center ">
+          <div class="w10 flex justify-between">
             ${logo(state)}
             ${navigation({
               active: state.page ? state.page.path : '',
               links: state.content ? state.content.children : { }
             })}
           </div>
-        </div>
+        </nav>
         ${view(state, emit)}
         ${opts.footer === false ? '' : footer(state, emit)}
       </main>
@@ -29,7 +29,9 @@ function wrapper (view, opts = {}) {
 
 function logo (state, emit) {
   return html` 
-    <a href="/"><img class="" src="/${state.content.image}" style="width: 10rem"></img></a>
+    <a href="/">
+      <img class="" src="/${state.content.image}" style="width: 10rem" />    
+    </a>
   `
 }
 
@@ -38,7 +40,7 @@ function navigation (state, emit) {
   var links = ov(state.links) || [ ]
 
   return html`
-    <div class="x xjc ">
+    <div class="flex-ns dn justify-center ">
       ${links.map(link)}
       <div class="pt0 ml3">
        <a class="mv1 pv2 ph3 bg-white black dib no-underline" href="https://my.vibedrive.co">Login</a>
@@ -65,14 +67,16 @@ function navigation (state, emit) {
 
 function footer (state, emit) {
   return html`
-    <div class="c12 p2 tcgrey x xjc item-start">
-      <div class="w10 x xjb pt1 bt1">
-        <div class="w-60 gray">
+    <div class="pa3 pa4-ns flex justify-center">
+      <div class="w10">
+        <div class="w-100 w-60-l pr4-l fl-ns gray">
           ${emailForm({ cta: state.content.subscribecta })}
           ${format(state.content.subscribetext)}
         </div>
-        ${social(state, emit)}
-      </div>
+        <div class="w-100 w-40-l pl4-l fl-ns tl tr-l">
+          ${social(state, emit)}
+        </div>      
+      </div>  
     </div>
   `
 }

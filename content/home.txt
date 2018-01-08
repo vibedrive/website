@@ -2,7 +2,10 @@ title: Vibedrive
 
 ----
 
-subtitle: Vibedrive is a modern tool for digital DJs.
+subtitle: 
+
+  Vibedrive is a modern tool 
+  for digital DJs.
 
 ----
 

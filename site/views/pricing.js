@@ -9,20 +9,18 @@ module.exports = wrapper(pricing, { footer: false })
 function pricing (state, emit) {
   return html`
     <div>
-      <div class="bg--black white vh-100 x p1 justify-center items-start">
+      <div class="pa3 pa4-ns white bg--black min-vh-100 flex justify-center">
         <div class="w10 flex flex-column justify-start items-center mb5 pb5">
-          <div class="fw5 f2 mb4 tac">${state.page.subtitle}</div>
-          <div class="mv3 w-60 tac">
+          <div class="fw5 f2 mb2 tac">${state.page.subtitle}</div>
+          <div class="mv3 w-100 w-80-m w-60-l tac">
             ${format(state.page.text)}
           </div>
-          <div class="w-30 mt2 mb5">
-            ${emailForm({
-              cta: state.page.cta,
-              orientation: 'flex-column',
-              theme: 'light'
-            })}
-          </div>
-
+          ${emailForm({
+            cta: state.page.cta,
+            orientation: 'flex-column',
+            theme: 'light'
+          })}
+     
           ${social(state, emit)}
         </div>
       </div>
